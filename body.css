@@ -8,6 +8,7 @@ body {
 	background-color:#333333;
 	background-image:url('bg.jpg');
 	background-size:cover;
+	background-position: center center;
 	text-align: left;
 	font-family: 'Open Sans', sans-serif;
 }
