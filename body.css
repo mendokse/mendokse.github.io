@@ -43,6 +43,20 @@ p {
 	line-height:19px;
 	letter-spacing:0.1px; 
 }
+.botlist {
+	padding-left: 30px;
+	width:800px;
+	height: 30px;
+	position:absolute;bottom:0;
+}
+.botlist p {
+	color:#e1e1e1;
+	font-size: 12px;
+}
+a {
+	color:#ef5658;
+}
+
 .wrapper {
 	margin: 40px auto;
 	width:500px;
