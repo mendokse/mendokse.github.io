@@ -54,6 +54,19 @@ p {
 	color:#e1e1e1;
 	font-size: 12px;
 }
+.botlist2 {
+	text-align: right;
+	margin-right: 30px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+	width:800px;
+	height: 30px;
+}
+.botlist2 p {
+	color:#e1e1e1;
+	font-size: 12px;
+}
 a {
 	color:#ef5658;
 }
