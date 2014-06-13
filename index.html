@@ -1,75 +1,61 @@
-
+<!DOCTYPE html>
 <html>
 <head>
-<title>Dayz role randomizer</title>
-<link rel="stylesheet" type="text/css" href="body.css">
+	<title>Dualtech</title>
+	<link rel="stylesheet" type="text/css" href="body.css">
 
 </head>
+<body>
 
-<div class="bar">
-	<h1>DAYZ ROLE RANDOMIZER</h1>
+	<div class="static">
+		
+		<img class="topleft-img" src="img/topleft.png">
+		<img class="topright-img" src="img/topright.png">
 
-	<a onclick="showQuotation();" class="button-red" href="#">
-    Randomize
-  	</a>
+	</div >
 
-</div>
+	<div class="menu">
+	
+		<img class="menuleft-img" src="img/menuleft.png">
+		<img class="menuright-img" src="img/menuright.png">
 
-<div class="wrapper">
-	<p id="quotation"></p>
-</div>
+	</div>
+	
+	<div class="bg">
 
-<div class="botlist"><p>Roles & idea lifted from reddit user <a href="http://www.reddit.com/user/Subhazard">user/Subhazard</a> Bgimage artist: -</p></div>
+		<div class="left"><img class="left-img" src="img/left.png"></div>
 
-<div class="botlist2"><p>Site made by: <a href="http://www.reddit.com/user/tjaopapa">user/tjaopapa</a></p></div>
+	</div>
 
-<script>
-var Quotation = [
-		"<h1>Role: Shephard (Ex: Moses)</h1><br><h2>Mission:</h2><p>Run up and down the cost escorting newbies to their destinations, create as big of a flock as you can, trying to feed and gear all of them.</p>",
 
-		"<h1>Stick Up Burglar. (Ex: Omar from the Wire)</h1><br><h2>Mission:</h2><p>Rob everyone you see at gunpoint but kill no one. The plan is to get their loot and get out as quickly as possible. If they run away, try to kill them, but don't pursue, it's about the loot, not the kills.</p>",
 
-		"<h1>Bandit Hunter (Ex: Django)</h1><br><h2>Mission:</h2><p>Slink around the coast, sticking to the shadows. Stalk those that prey on the weak and end them. Take some spoils for yourself, but try to give some away.</p>",
+	<script type="text/javascript">
+	(function(){
+		var yPos;
 
-		"<h1>Career Sociopath (Ex: Littlefinger) </h1><br><h2>Mission:</h2><p>Make friends with people as means to a selfish end. Use them to get what you want, and kill them when they become inconvenient. You're here to serve yourself, and manipulate those around you into getting your way.</p>",
+		function scrollTracker() {
+			if (yPos > 62 && !document.body.classList.contains('lock-nav')) {
+				document.body.classList.add('lock-nav');
+			} else if (yPos < 62 && document.body.classList.contains('lock-nav')) {
+				document.body.classList.remove('lock-nav');
+			}
 
-		"<h1>Combat Medic (Ex: Eugene Roe from Band of Brothers)</h1><br><h2>Mission:</h2><p>Gather supplies for the sole purpose of healing people. Offer to help out a large squad of people (find them). Do not carry a weapon except for a melee weapon.</p>",
+			console.log(yPos);
 
-		"<h1>Bloodthirsty Psychopath (Ex: Psychopath from Borderlands)</h1><br><h2>Mission:</h2><p>Everyone you see you must immediately try to kill while shouting insane, terrifying babble over your microphone.</p>",
+			window.requestAnimationFrame(scrollTracker);
+		}
 
-		"<h1>Resident Super Hero (Ex: Batman, cept lethal)</h1><br><h2>Mission:</h2><p>Keep the scum out of a city of your choice: Berezino, Elektro, or Cherno. Protect the weak, destroy the wicked. You are never allowed to leave the city. Come up with a persona.</p>",
+		function setPos() {
+			yPos = document.body.scrollTop;
+		}
 
-		"<h1>Boxer</h1><br><h2>Mission:</h2><p>Challenge anyone and everyone to boxing. No weapons allowed. Gotta kill zombies this way too.</p>",
+		window.addEventListener('scroll', setPos, false);
 
-		"<h1>Cowboy</h1><br><h2>Mission:</h2><p>Find two revolvers, challenge everyone to 10-pace revolver duels.</p>",
+		scrollTracker();
+	}());
 
-		"<h1>Wildcard</h1><br><h2>Mission:</h2><p>Do whatever.</p>"
-	],
-	Q = Quotation.length;
+	
 
-function showQuotation(){
-	var whichQuotation = Math.round(Math.random()*(Q-1));
-
-	document.getElementById("quotation").innerHTML = Quotation[whichQuotation];
-}
-
-showQuotation();
-</script>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-47339612-1']);
-  _gaq.push(['_setDomainName', 'mendokse.github.io']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+	</script>
 </body>
 </html>
-
-
