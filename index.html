@@ -11,6 +11,10 @@
 		#container {
 			margin: 0px auto;
 			border: 0px;
+			top: 50%; 
+			left: 50%;
+			transform: translate(-50%, -50%);
+			position: fixed;
 		}
 		#videoElement {
 			width: 720px;
@@ -23,16 +27,20 @@
 		
 		#wrapper {
 			width: 700px;
-  			margin-left: auto;
-  			margin-right: auto;
-  			background-color: #000;
+			position: absolute;
+			top: 50%; 
+			left: 50%;
+			transform: translate(-50%, -50%);
+  			text-align: center;
+  			margin-top: 200px;
+  			z-index: 999;
 		}
 	</style>
 </head>
 
 <body>
 	
-	<div class="wrapper">
+	<div id="wrapper">
 		<img class="glasses" src="img/1.png">
 		<img class="glasses" src="img/2.png">
 		<img class="glasses" src="img/3.png">
