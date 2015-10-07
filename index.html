@@ -1,62 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dualtech</title>
-	<link rel="stylesheet" type="text/css" href="body.css">
+	<meta charset="utf-8">
+	<meta content="stuff, to, help, search, engines, not" name="keywords">
+	<meta content="What this page is about." name="description">
+	<meta content="Display Webcam Stream" name="title">
+	<title>Display Webcam Stream</title>
 
+	<style>
+		#container {
+			margin: 0px auto;
+			border: 0px;
+		}
+		#videoElement {
+			width: 100%;
+			height: 100%;
+			background-color: #666;
+		}
+	</style>
 </head>
+
 <body>
+	<div id="container">
+		<video autoplay="true" id="videoElement">
 
-	<div class="static">
-		
-		<img class="topleft-img" src="img/topleft.png">
-		<img class="topright-img" src="img/topright.png">
-
-	</div >
-
-	<div class="menu">
-		
-		<img class="menuleft-img" src="img/menuleft.png">
-		<img class="menuright-img" src="img/menuright.png">
-
+		</video>
 	</div>
-	
-	<div class="bg">
+	<script>
+		var video = document.querySelector("#videoElement");
 
-		<div class="left"><img class="left-img" src="img/content.png"></div>
+		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
 
-
-	</div>
-
-
-
-	<script type="text/javascript">
-	(function(){
-		var yPos;
-
-		function scrollTracker() {
-			if (yPos > 62 && !document.body.classList.contains('lock-nav')) {
-				document.body.classList.add('lock-nav');
-			} else if (yPos < 62 && document.body.classList.contains('lock-nav')) {
-				document.body.classList.remove('lock-nav');
-			}
-
-			console.log(yPos);
-
-			window.requestAnimationFrame(scrollTracker);
+		if (navigator.getUserMedia) {       
+			navigator.getUserMedia({video: true}, handleVideo, videoError);
 		}
 
-		function setPos() {
-			yPos = document.body.scrollTop;
+		function handleVideo(stream) {
+			video.src = window.URL.createObjectURL(stream);
+			console.log("Stream created");
 		}
 
-		window.addEventListener('scroll', setPos, false);
-
-		scrollTracker();
-	}());
-
-	
-
+		function videoError(e) {
+		console.log("notworking");
+		}
 	</script>
 </body>
 </html>
