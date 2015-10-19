@@ -8,6 +8,11 @@
 	<title>Display Webcam Stream</title>
 
 	<style>
+	
+		html, body {
+		background-color: #ffd791;
+		}
+
 		#container {
 			margin: 0px auto;
 			border: 0px;
@@ -18,7 +23,10 @@
 		}
 		#videoElement {
 			width: 720px;
-			background-color: #666;
+			background-image: url('img/bg.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
 			transform: rotateY(180deg);
     		-webkit-transform:rotateY(180deg);
     		-moz-transform:rotateY(180deg);
@@ -48,11 +56,30 @@
 
   			z-index: 999;
 		}
+		#wrapper2 {
+			padding-top:2050px;
+			margin-bottom:400px;
+			
+			position: absolute;
+			top: 50%; 
+			left: 50%;
+			transform: translate(100%, -50%);
+
+  			z-index: 999;
+		}
+		
+		.title{
+			margin-top: 45px;
+			text-align: center;
+			position: fixed;
+			left: 50%;
+			transform: translate(-50%);
+		}
 	</style>
 </head>
 
 <body>
-	
+	<div class="title"><img width="750px" src="img/title.png"></div>
 	<div id="wrapper">
 		<div class="glasses2"><img class="glasses" src="img/1.png"></div>
 		<div class="glasses2"><img class="glasses" src="img/2.png"></div>
@@ -61,6 +88,15 @@
 		<div class="glasses2"><img class="glasses" src="img/5.png"></div>
 		<div class="glasses2"><img class="glasses" src="img/6.png"></div>
 		<div class="glasses2"><img class="glasses" src="img/7.png"></div>
+	</div>
+		<div id="wrapper2">
+		<div class="glasses2"><img class="glasses" src="img/right.png"></div>
+		<div class="glasses2"><img class="glasses" src="img/right.png"></div>
+		<div class="glasses2"><img class="glasses" src="img/right.png"></div>
+		<div class="glasses2"><img class="glasses" src="img/right.png"></div>
+		<div class="glasses2"><img class="glasses" src="img/right.png"></div>
+		<div class="glasses2"><img class="glasses" src="img/right.png"></div>
+		<div class="glasses2"><img class="glasses" src="img/right.png"></div>
 	</div>
 	
 	<div id="container">
