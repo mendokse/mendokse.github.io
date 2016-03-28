@@ -44,12 +44,40 @@ table {
 
 .fg {
 	width:100%;
-	height: 100%;
-	background: url(assets/fg.png);
 	background-size: 100%;
 	background-position: cover;
+	z-index: 1;
+		overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.buu {
+	height: 2000px;
+	background-color: white;
+	z-index: 1;
+	top: 500px;
 }
 
 .bg {
-	height: 4000px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	height: ;
+	z-index: -99;
 }
+
+.image {
+	overflow-y: hidden;
+	overflow-x: hidden;
+	z-index: -99;
+    position: absolute;
+    top: -200;
+    left: 200;
+    height: 150%;
+
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
