@@ -1,172 +1,46 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="">
+
 <head>
-	<meta charset="utf-8">
-	<meta content="stuff, to, help, search, engines, not" name="keywords">
-	<meta content="What this page is about." name="description">
-	<meta content="Display Webcam Stream" name="title">
-	<title>Glasögonorm</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<style>
-	
-		html, body {
-		background-color: #fff;
-		margin:0;
-		padding: 0;
-		}
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-		.container {
-			
-			-webkit-clip-path: circle(300px at center);
-			overflow: hidden;
-			margin: 0px auto;
-			border: 0px;
-			top: 50%; 
-			left: 50%;
-			transform: translate(-50%, -50%);
-			position: fixed;
-		}
-		
-		#videoElement {
-			width: 820px;
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
-			transform: rotateY(180deg);
-    		-webkit-transform:rotateY(180deg);
-    		-moz-transform:rotateY(180deg);
-		}
-		
-		#thecanvas {
-			top:-20%;
-			left: -20%;
-			width: 120%;
-			height: 120%;
-			-webkit-filter: blur(100px);
-			z-index: -99;
-			position: fixed;
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
-			transform: rotateY(180deg);
-    		-webkit-transform:rotateY(180deg);
-    		-moz-transform:rotateY(180deg);
-    	
-		}
-		.white{
-			
-			position: fixed;
-			width: 100%;
-			height: 100%;
-			top:0;
-			left:0;
-			background-color: rgba(255,255,255,0.5);
-		}
-		.glasses{
-			
-			text-align: center;
-			width: 250px;
-			
-			
-		}
-		.glasses2 {
-			height: 270;
-			margin-bottom: 100px;
-			display: block;
-			
-		}
-		
-		#wrapper {
-			padding-top:2050px;
-			margin-bottom:400px;
-			
-			position: absolute;
-			top: 50%; 
-			left: 50%;
-			transform: translate(-50%, -50%);
-
-  			z-index: 999;
-		}
-		#wrapper2 {
-			padding-top:2050px;
-			margin-bottom:400px;
-			
-			position: absolute;
-			top: 50%; 
-			left: 80%;
-			transform: translate(100%, -50%);
-
-  			z-index: 999;
-		}
-		
-		.title{
-			margin-top: 45px;
-			text-align: center;
-			position: fixed;
-			left: 50%;
-			transform: translate(-50%);
-		}
-	</style>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-	<div id="wrapper">
-		<div class="glasses2"><img class="glasses" src="assets/1.png"></div>
-		<div class="glasses2"><img class="glasses" src="assets/2.png"></div>
-		<div class="glasses2"><img class="glasses" src="assets/3.png"></div>
-		<div class="glasses2"><img class="glasses" src="assets/4.png"></div>
-		<div class="glasses2"><img class="glasses" src="assets/5.png"></div>
-		<div class="glasses2"><img class="glasses" src="assets/6.png"></div>
-		<div class="glasses2"><img class="glasses" src="assets/7.png"></div>
-	</div>
-		<div id="wrapper2">
-		<div class="glasses2"><img class="price" src="assets/right.png"></div>
-		<div class="glasses2"><img class="price" src="assets/right.png"></div>
-		<div class="glasses2"><img class="price" src="assets/right.png"></div>
-		<div class="glasses2"><img class="price" src="assets/right.png"></div>
-		<div class="glasses2"><img class="price" src="assets/right.png"></div>
-		<div class="glasses2"><img class="price" src="assets/right.png"></div>
-		<div class="glasses2"><img class="price" src="assets/right.png"></div>
-	</div> 
-	<div class="white"></div>
-	<div class="container">
-		<video autoplay="true" id="videoElement"></video>
-	</div>
-	<canvas id="thecanvas">
-    </canvas>
 
-	<script>
-	
-	// webcam stuff
-	
-		var video = document.querySelector("#videoElement");
-		var animation;
-		var context = thecanvas.getContext('2d');
-		
-		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
 
-		if (navigator.getUserMedia) {       
-			navigator.getUserMedia({video: true}, handleVideo, videoError);
-		}
+  <div class="box">test</div>
+  <div class="box2">test</div>
 
-		function handleVideo(stream) {
-			video.src = window.URL.createObjectURL(stream);
-			animation = requestAnimationFrame(draw);
-			console.log("Stream created");
-		}
 
-		function videoError(e) {
-			cancelAnimationFrame(animation);
-			animation = null;
-			console.log("notworking");
-		}
 
-		function draw() {
-			context.drawImage( video, 0, 0, thecanvas.width, thecanvas.height);
-			var dataURL = thecanvas.toDataURL();
-			requestAnimationFrame(draw);
-		}
-		
-	</script>
+
+
+
+
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
+
 </html>
