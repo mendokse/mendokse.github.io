@@ -102,7 +102,6 @@ textarea {
 
 .box {
     background-color: white;
-    height: 650px;
     margin: auto;
     width: 100%;
 
@@ -110,14 +109,12 @@ textarea {
 
 .box2 {
     background-color: white;
-    height: 500px;
     margin: auto;
 
 }
 
 .box3 {
     background-color: #F0F0F0;
-    height: 500px;
     margin: auto;
 
 }
@@ -132,12 +129,11 @@ textarea {
 .bild1 {
     padding-top: 20px;
     display: block;
-    width: 85%;
+    width: 100%;
     margin: auto;
 }
 
 .bild2 {
-    padding-top: 60px;
     width: 100%;
 
 }
