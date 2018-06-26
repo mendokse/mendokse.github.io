@@ -105,11 +105,7 @@ textarea {
     height: 650px;
     margin: auto;
     width: 100%;
-    background-image: url("../img/meny.png");
-    background-size: 85%;
-    background-repeat: no-repeat;
-    background-position: center 30px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 
 }
 
@@ -117,11 +113,6 @@ textarea {
     background-color: white;
     height: 500px;
     margin: auto;
-    background-image: url("../img/fryshuset.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center 60px;
-    padding-bottom: 30px;
 
 }
 
@@ -129,11 +120,6 @@ textarea {
     background-color: #F0F0F0;
     height: 500px;
     margin: auto;
-    background-image: url("../img/oppet.png");
-    background-size: 95%;
-    background-repeat: no-repeat;
-    background-position: center 10px;
-    padding-bottom: 30px;
 
 }
 
@@ -144,9 +130,22 @@ textarea {
 }
 
 
+.bild1 {
+    padding-top: 20px;
+    display: block;
+    width: 85%;
+    margin: auto;
+}
 
+.bild2 {
+    padding-top: 60px;
+    width: 100%;
 
+}
 
+.bild3 {
+    width: 100%;
+}
 
 
 
