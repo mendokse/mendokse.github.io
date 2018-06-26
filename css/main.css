@@ -101,18 +101,47 @@ textarea {
 
 
 .box {
-    background-color: lightblue;
-    height: 500px;
+    background-color: white;
+    height: 650px;
+    margin: auto;
+    width: 100%;
+    background-image: url("../img/meny.png");
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: center 30px;
+    padding-bottom: 30px;
+
 }
 
 .box2 {
-    background-color: green;
+    background-color: white;
     height: 500px;
+    margin: auto;
+    background-image: url("../img/fryshuset.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center 60px;
+    padding-bottom: 30px;
+
 }
 
+.box3 {
+    background-color: #F0F0F0;
+    height: 500px;
+    margin: auto;
+    background-image: url("../img/oppet.png");
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    padding-bottom: 30px;
 
+}
 
-
+.menu {
+    background-color: #394654;
+    height: 60px;
+    margin: auto;
+}
 
 
 
