@@ -1,4 +1,4 @@
 $(document).ready(function(){
-   $('html, body').animate({scrollTop : 320}, 600);
+   $('html, body').animate({scrollTop : 350}, 600);
 });
 
